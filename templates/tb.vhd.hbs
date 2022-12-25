@@ -1,0 +1,16 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity tb_{{lowerCase entity}} is
+end entity;
+
+architecture behavioral of tb_{{lowerCase entity}} is
+    generic();
+    component {{lowerCase entity}} is
+    end component {{lowerCase entity}};
+    
+    begin
+        uut: {{lowerCase entity}} port map();
+    end;
+end behavioral;
+

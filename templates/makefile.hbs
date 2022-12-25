@@ -1,0 +1,8 @@
+GHDL=ghdl
+FLAGS="--std=08"
+
+
+all:
+	@$(GHDL) -a $(FLAGS) {{pascalCase name}}.vhd {{pascalCase name}}_tb.vhd
+	@$(GHDL) -e $(FLAGS) tb_{{ lowerCase entity }}
+	@$(GHDL) -r $(FLAGS) tb_{{ lowerCase entity }} --wave=wave.ghw --stop-time=1000ns
