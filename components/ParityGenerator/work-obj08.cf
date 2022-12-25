@@ -1,0 +1,7 @@
+v 4
+file . "ParityGenerator.vhd" "41cb28ca1f516ddedc51d11466bada720ce42408" "20221225220546.878":
+  entity generator at 1( 0) + 0 on 87;
+  architecture behavior of generator at 15( 241) + 0 on 88;
+file . "ParityGenerator_tb.vhd" "8390f9c25ad1ae5f03ce7cbcdb1b6b206e28aacf" "20221225220546.879":
+  entity tb_generator at 1( 0) + 0 on 89;
+  architecture behavior of tb_generator at 7( 80) + 0 on 90;

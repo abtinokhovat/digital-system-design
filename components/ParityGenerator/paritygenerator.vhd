@@ -1,12 +1,29 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;
-use IEEE.NUMERIC_STD.all;
 
 entity generator is
- port();
+generic (
+    size: integer := 8
+);
+ port(
+    input: in std_logic_vector(size - 1 downto 0);
+    output_even: out std_logic;
+    output_odd: out std_logic
+ );
 end generator;
  
-architecture behavior of generator is
+architecture behavior of generator is    
 begin
+    process(input)
+        variable temp: std_logic;  
+    begin
+        temp := '0';
+        for i in 0 to size - 1 loop
+            temp := temp xor input(i);
+        end loop;
+        output_even <= temp;
+        output_odd <= not temp;
+    end process;
+    
 end behavior;
 
