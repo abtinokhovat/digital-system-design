@@ -18,7 +18,7 @@ begin
         variable temp: std_logic;  
     begin
         temp := '0';
-        for i in 0 to size - 1 loop
+        for i in 0 to input'length - 1 loop
             temp := temp xor input(i);
         end loop;
         output_even <= temp;

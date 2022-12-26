@@ -5,12 +5,19 @@ entity tb_{{lowerCase entity}} is
 end entity;
 
 architecture behavioral of tb_{{lowerCase entity}} is
-    generic();
     component {{lowerCase entity}} is
+        generic();
+        port();
     end component {{lowerCase entity}};
+
+    -- signals here
     
     begin
         uut: {{lowerCase entity}} port map();
+        process
+        begin  
+        wait;
+        end process;
     end;
 end behavioral;
 
