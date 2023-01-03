@@ -1,6 +1,6 @@
-library IEEE;
-use IEEE.STD_LOGIC_1164.all;
-use IEEE.NUMERIC_STD.all;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 entity decoder is
 Generic
@@ -8,8 +8,8 @@ Generic
     size: integer := 2
 );
  port(
- input : in STD_LOGIC_VECTOR(size-1 downto 0);
- output : out STD_LOGIC_VECTOR((2**size)-1 downto 0)
+ input : in std_logic_vector(size-1 downto 0);
+ output : out std_logic_vector((2**size)-1 downto 0)
  );
 end decoder;
  
