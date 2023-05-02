@@ -1,0 +1,9 @@
+@echo off set GHDL=ghdl set FLAGS=--std=08 rem Compile source files %GHDL% -a
+%FLAGS%
+{{pascalCase name}}.vhd
+{{pascalCase name}}_tb.vhd rem Elaborate testbench entity %GHDL% -e %FLAGS% tb_{{lowerCase
+  entity
+}}
+
+rem Run simulation and save waveform %GHDL% -r %FLAGS% tb_{{lowerCase entity}}
+--wave=wave.ghw --stop-time=1000ns

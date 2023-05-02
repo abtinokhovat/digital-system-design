@@ -29,6 +29,11 @@ module.exports = function (plop) {
         path: `components/{{pascalCase name}}/Makefile`,
         templateFile: "templates/makefile.hbs",
       },
+      {
+        type: "add",
+        path: `components/{{pascalCase name}}/windows.bat`,
+        templateFile: "templates/windows.bat.hbs",
+      },
     ],
   });
 };
